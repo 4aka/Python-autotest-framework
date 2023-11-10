@@ -1,0 +1,11 @@
+.env
+.pytest_cache
+venv
+/shelf/
+/workspace.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/workspace.xml
+/.idea/framework.iml
