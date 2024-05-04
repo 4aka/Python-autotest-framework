@@ -1,9 +1,4 @@
-import requests
-from framework import LoadEnv as env
-from dotenv import load_dotenv
-import os
-from os.path import join, dirname
-from framework.APIHelper import Request as api
+from framework.api.APIHelper import Request as api
 
 POSTS_URI = "/posts"
 
