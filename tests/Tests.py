@@ -1,15 +1,11 @@
-import requests
-import pytest
-import framework.Functions as funk
-from builder.PostsBuilder import PostsModelBuilder as build
-import controller.PostsController as resp
-from models.post_response import Post
-from models.posts_list import UserList
-from pydantic import parse_obj_as
-from pydantic import TypeAdapter
 from typing import List
-from typing_extensions import TypedDict
-from pydantic import TypeAdapter, ValidationError
+
+import pytest
+from pydantic import TypeAdapter
+
+import controller.PostsController as resp
+from builder.PostsBuilder import PostsModelBuilder as build
+from models.post_response import Post
 
 
 def test_get_posts():
