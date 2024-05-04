@@ -1,9 +1,9 @@
-from framework.Functions import Fake as fake
+from framework.api.Functions import Fake as fake
 from models.post_response import Post
 
 class PostsModelBuilder:
 
-    def random_posts_model():
+    def random_posts_model(self):
         return Post(
             userId = fake.fake_id(),
             id = fake.fake_id(),
