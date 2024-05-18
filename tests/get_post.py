@@ -4,12 +4,6 @@ from pydantic import TypeAdapter
 from controller.posts_controller import PostsController as action
 from models.post_response import Post
 
-'''
-Test name should start from test_
-'''
-
-''' Get posts '''
-
 
 def test_get_posts():
     # Get new posts

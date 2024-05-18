@@ -1,9 +1,7 @@
-from framework.API.api_helper import Request as api
-import logging
-import pytest
-import requests
+from framework.api.api_helper import Request as api
 
 POSTS_URI = "/posts"
+
 
 class PostsController:
 
