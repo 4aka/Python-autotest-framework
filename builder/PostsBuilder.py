@@ -1,5 +1,5 @@
 from framework.api.Functions import Fake as fake
-from models.post_response import Post
+from models.create_post_model import Post
 
 class PostsModelBuilder:
 

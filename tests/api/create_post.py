@@ -1,7 +1,7 @@
 import pytest
 from builder.posts_builder import PostsModelBuilder as build
 from controller.posts_controller import PostsController as action
-from models.post_response import Post
+from models.create_post_model import Post
 
 
 def test_create_post():
