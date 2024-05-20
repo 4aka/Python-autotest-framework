@@ -6,6 +6,7 @@ import random
 import string
 from faker import Faker
 
+
 class Env:
 
     @staticmethod

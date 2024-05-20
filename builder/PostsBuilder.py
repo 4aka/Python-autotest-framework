@@ -1,4 +1,4 @@
-from framework.api.Functions import Fake as fake
+from framework.api.functions import Fake as fake
 from models.create_post_model import Post
 
 class PostsModelBuilder:
