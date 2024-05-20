@@ -1,5 +1,6 @@
-from framework.ui.base_app import BasePage
 from selenium.webdriver.common.by import By
+from framework.ui.base_app import BasePage
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class GoogleSeacrhLocators:
@@ -9,6 +10,7 @@ class GoogleSeacrhLocators:
     VIDEO_BUTTON = (By.XPATH, "CBAQAA")
     SHOPPING_BUTTON = (By.XPATH, "CBEQAA")
     NEWS_BUTTON = (By.XPATH, "CA8QAA")
+    RESULTS_LISTS = (By.CLASS_NAME, "MjjYud")
 
 
 class SearchHelper(BasePage):
@@ -20,7 +22,15 @@ class SearchHelper(BasePage):
         return search_field
 
     def click_on_the_search_button(self):
-        return self.find_element(GoogleSeacrhLocators.SEARCH_BUTTON, time=2).click()
+        self.wait_until_clickable(GoogleSeacrhLocators.SEARCH_BUTTON, 5)
+        return self.find_element(GoogleSeacrhLocators.SEARCH_BUTTON).click()
+
+    def waiting_for_results_list(self):
+        self.wait_until_clickable(GoogleSeacrhLocators.RESULTS_LISTS, 5)
+
+    def get_results_list(self):
+        SearchHelper.waiting_for_results_list(self)
+        return self.find_elements(GoogleSeacrhLocators.RESULTS_LISTS)
 
     # def check_navigation_bar(self):
     #     all_list = self.find_elements(GoogleSeacrhLocators.NAVIGATION_BAR, time=2)
