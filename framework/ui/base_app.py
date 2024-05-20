@@ -23,3 +23,6 @@ class BasePage:
 
     def go_to_site(self):
         return self.driver.get(self.base_url)
+
+    def wait_until_clickable(self, element, time):
+        (WebDriverWait(self.driver, time).until(expected_condition.element_to_be_clickable(element)))
