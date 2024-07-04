@@ -1,12 +1,10 @@
 
 v1 Add reporter Done
 v1 Add logger Done
-v1 add before/after methods? class fixtures Done
+v1 add before/after methods class fixtures Done
 v1 Add code for UI testing Done
+v1 Add suites Done
 
 Add possibility to work with credentials and tokens
 Add all possible parsing for API methods
-Add suites
 
-see instructions in notes:
-https://docs.google.com/document/d/1Wp4lWVtS5VeS8X6JuT_CbbCfof0uzVCL1EzPCEmJ_CA/edit?usp=sharing
