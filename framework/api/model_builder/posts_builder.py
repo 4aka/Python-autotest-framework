@@ -1,6 +1,5 @@
-from framework.helpers import Fake as faker
-from models.create_post_model import Post
-from models.edit_post_model import Edit
+from fake_functions.faker import Fake as faker
+from framework.api.models.create_post_model import Post
 
 
 class PostsModelBuilder:

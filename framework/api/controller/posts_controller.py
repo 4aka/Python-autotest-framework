@@ -1,4 +1,4 @@
-from framework.api.api_helper import Request as api
+from framework.api.service.api_service import Request as api
 
 POSTS_URI = "/posts"
 
