@@ -11,3 +11,5 @@ tests/test_ui/report.html
 tests/test_ui/pytest.log
 tests/test_ui/assets
 assets
+/tests/test_api/report.xml
+/report.xml
