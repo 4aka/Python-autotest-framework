@@ -3,3 +3,11 @@
 venv
 .idea
 report.html
+pytest.log
+tests/test_api/report.html
+tests/test_api/pytest.log
+tests/test_api/assets
+tests/test_ui/report.html
+tests/test_ui/pytest.log
+tests/test_ui/assets
+assets
