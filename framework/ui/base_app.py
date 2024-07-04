@@ -1,6 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as expected_condition
-from envs import global_vars
+from env_preferences import global_vars
 
 
 UI_BASE_URL = global_vars.UI_BASE_URL

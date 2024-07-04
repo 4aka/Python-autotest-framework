@@ -1,5 +1,5 @@
 import logging
-from envs import global_vars as global_vars
+from env_preferences import global_vars as global_vars
 
 log_level = global_vars.LOG_LEVEL
 
@@ -29,7 +29,7 @@ def setup_logger(name=__name__, log_file='pytest.log'):
     return logger
 
 
-def print(message: str):
+def print_line(message: str):
     logger = setup_logger(name=__name__)
 
     if log_level == 'DEBUG':

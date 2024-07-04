@@ -1,6 +1,6 @@
 import pytest
 from selenium import webdriver
-from envs import load_env as env
+from env_preferences import load_env as env
 
 browserName = env.get_from_env('BROWSER_NAME')
 
@@ -9,7 +9,7 @@ browserName = env.get_from_env('BROWSER_NAME')
 # https://pypi.org/project/chromedriver-py/
 # https://pypi.org/project/get-gecko-driver/
 
-# pip install webdriver-manager
+# TODO pip install webdriver-manager
 
 
 def get_driver():
