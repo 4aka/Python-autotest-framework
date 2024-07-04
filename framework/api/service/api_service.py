@@ -9,12 +9,12 @@ class Request:
 
     @staticmethod
     def send_get_request(string_path):
-        response = requests.get(f"{URL}{string_path}")
+        response = requests.get(f"{BASE_URL}{string_path}")
         return response
 
     @staticmethod
     def send_get_request_with_parameters(string_path, parameters):
-        response = requests.get(f"{URL}{string_path}", params=parameters)
+        response = requests.get(f"{BASE_URL}{string_path}", params=parameters)
         return response
 
     @staticmethod
