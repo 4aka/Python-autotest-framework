@@ -1,15 +1,16 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as expected_condition
-from framework import load_env as env
+from envs import global_vars
 
-baseUrl = env.get_from_env('BASE_WEB_URL')
+
+UI_BASE_URL = global_vars.UI_BASE_URL
 
 
 class BasePage:
 
     def __init__(self, driver):
         self.driver = driver
-        self.base_url = baseUrl
+        self.base_url = UI_BASE_URL
 
     def find_element(self, locator, time=10):
         message = f"Can't find element by locator {locator}"

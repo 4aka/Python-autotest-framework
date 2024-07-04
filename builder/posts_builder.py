@@ -5,6 +5,7 @@ from models.edit_post_model import Edit
 
 class PostsModelBuilder:
 
+    @staticmethod
     def build_random_post_model():
         return Post(
             userId=faker.fake_id(),

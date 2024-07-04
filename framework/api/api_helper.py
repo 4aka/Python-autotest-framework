@@ -1,8 +1,8 @@
 import requests
-from framework import load_env as env
+from envs import global_vars
 
 
-URL = env.get_from_env('API_URL')
+BASE_URL = global_vars.BASE_URL
 
 
 class Request:
@@ -19,21 +19,21 @@ class Request:
 
     @staticmethod
     def send_post_request(string_path, body):
-        response = requests.post(f"{URL}{string_path}", body)
+        response = requests.post(f"{BASE_URL}{string_path}", body)
         return response
 
     @staticmethod
     def send_post_request_with_parameters(string_path, body):
-        response = requests.post(f"{URL}{string_path}", body)
+        response = requests.post(f"{BASE_URL}{string_path}", body)
         return response
 
     @staticmethod
     def send_delete_request(string_path):
-        response = requests.delete(f"{env.get_from_env('API_URL')}{string_path}")
+        response = requests.delete(f"{BASE_URL}{string_path}")
         return response
 
     @staticmethod
     def send_put_request(string_path, body):
-        response = requests.put(f"{env.get_from_env('API_URL')}{string_path}", data=body)
+        response = requests.put(f"{BASE_URL}{string_path}", data=body)
         return response
 
