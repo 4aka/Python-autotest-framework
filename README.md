@@ -2,6 +2,7 @@
 ### Fill in .env with actual data
 ### --------------------------------------
 ### Execute commands:
+### python.exe -m pip install --upgrade pip
 ### pip install -r requirements.txt
 ### pytest
 ### check report
