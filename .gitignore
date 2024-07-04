@@ -13,3 +13,4 @@ tests/test_ui/assets
 assets
 /tests/test_api/report.xml
 /report.xml
+/report/report.xml
