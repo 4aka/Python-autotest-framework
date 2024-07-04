@@ -1,4 +1,4 @@
-from pages.test_google_search_page import SearchHelper
+from framework.ui.pages.test_google_search_page import SearchHelper
 
 
 # https://selenium-python.readthedocs.io/

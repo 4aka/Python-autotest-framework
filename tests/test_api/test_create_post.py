@@ -1,8 +1,7 @@
 import pytest
-from builder.posts_builder import PostsModelBuilder as build
-from controller.posts_controller import PostsController as action
-from models.create_post_model import Post
-from logger_module import logger_setup as log
+from framework.api.model_builder.posts_builder import PostsModelBuilder as build
+from framework.api.controller.posts_controller import PostsController as action
+from framework.api.models.create_post_model import Post
 
 
 @pytest.fixture(scope='function')

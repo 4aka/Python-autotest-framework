@@ -1,8 +1,4 @@
-from typing import List
 import pytest
-from pydantic import TypeAdapter
-from controller.posts_controller import PostsController as action
-from models.create_post_model import Post
 
 
 @pytest.fixture(scope='function')
