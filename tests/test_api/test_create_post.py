@@ -11,10 +11,11 @@ def setup_function():
     print("\nTearing down function...\n")
 
 
+@pytest.mark.api
 def test_create_post(setup_module, setup_function):
-    # print('\nTest\n')
-    # log.print('logging test in API test')
-    # assert 1 > 0
+    print('\nTest\n')
+    log.print('logging test in API test')
+    assert 1 > 0
 
     # Build model
     post_data = build.build_random_post_model()
@@ -36,6 +37,7 @@ def test_create_post(setup_module, setup_function):
     assert response_model.body == post_data.body
 
 
+@pytest.mark.api
 def test_create_post2(setup_module, setup_function):
     print('\nTest\n')
     assert 1 < 0

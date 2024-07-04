@@ -10,6 +10,7 @@ def setup_function():
     print("\nTearing down function...\n")
 
 
+@pytest.mark.api
 def test_edit_post(setup_module, setup_function):
     print('\nTest\n')
     assert 1 > 0

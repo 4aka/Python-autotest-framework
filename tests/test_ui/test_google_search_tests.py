@@ -1,8 +1,11 @@
+import pytest
+
 from framework.ui.pages.test_google_search_page import SearchHelper
 
 
 # https://selenium-python.readthedocs.io/
 
+@pytest.mark.ui
 def test_google_search(browser):
 
     # TODO exclude steps below from the test
