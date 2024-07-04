@@ -3,7 +3,7 @@ from framework.ui.base_app import BasePage
 from selenium.webdriver.support.ui import WebDriverWait
 
 
-class GoogleSeacrhLocators:
+class GoogleSearchLocators:
     SEARCH_FIELD = (By.ID, "APjFqb")
     SEARCH_BUTTON = (By.CLASS_NAME, "gNO89b")
     IMAGES_BUTTON = (By.XPATH, "CA0QAA")
@@ -16,21 +16,21 @@ class GoogleSeacrhLocators:
 class SearchHelper(BasePage):
 
     def enter_word(self, word):
-        search_field = self.find_element(GoogleSeacrhLocators.SEARCH_FIELD)
+        search_field = self.find_element(GoogleSearchLocators.SEARCH_FIELD)
         search_field.click()
         search_field.send_keys(word)
         return search_field
 
     def click_on_the_search_button(self):
-        self.wait_until_clickable(GoogleSeacrhLocators.SEARCH_BUTTON, 5)
-        return self.find_element(GoogleSeacrhLocators.SEARCH_BUTTON).click()
+        self.wait_until_clickable(GoogleSearchLocators.SEARCH_BUTTON, 5)
+        return self.find_element(GoogleSearchLocators.SEARCH_BUTTON).click()
 
     def waiting_for_results_list(self):
-        self.wait_until_clickable(GoogleSeacrhLocators.RESULTS_LISTS, 5)
+        self.wait_until_clickable(GoogleSearchLocators.RESULTS_LISTS, 5)
 
     def get_results_list(self):
         SearchHelper.waiting_for_results_list(self)
-        return self.find_elements(GoogleSeacrhLocators.RESULTS_LISTS)
+        return self.find_elements(GoogleSearchLocators.RESULTS_LISTS)
 
     # def check_navigation_bar(self):
     #     all_list = self.find_elements(GoogleSeacrhLocators.NAVIGATION_BAR, time=2)
