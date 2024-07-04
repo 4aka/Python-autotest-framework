@@ -4,11 +4,5 @@
 ### Execute commands:
 ### python.exe -m pip install --upgrade pip
 ### pip install -r requirements.txt
-### pytest
+### pytest [pytest -m api, pytest -m ui]
 ### check report
-
-###
-###
-### tests/test_api/conftest.py is API listener
-### tests/test_ui/conftest.py is UI listener
-### 
