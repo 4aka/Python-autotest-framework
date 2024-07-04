@@ -1,7 +1,6 @@
 import pytest
 from selenium import webdriver
-
-from framework import load_env as env
+from envs import load_env as env
 
 browserName = env.get_from_env('BROWSER_NAME')
 
