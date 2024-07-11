@@ -13,7 +13,7 @@ class GoogleSearchLocators:
     RESULTS_LISTS = (By.CLASS_NAME, "MjjYud")
 
 
-class SearchHelper(BasePage):
+class SearchPage(BasePage):
 
     def enter_word(self, word):
         search_field = self.find_element(GoogleSearchLocators.SEARCH_FIELD)
@@ -29,10 +29,5 @@ class SearchHelper(BasePage):
         self.wait_until_clickable(GoogleSearchLocators.RESULTS_LISTS, 5)
 
     def get_results_list(self):
-        SearchHelper.waiting_for_results_list(self)
+        SearchPage.waiting_for_results_list(self)
         return self.find_elements(GoogleSearchLocators.RESULTS_LISTS)
-
-    # def check_navigation_bar(self):
-    #     all_list = self.find_elements(GoogleSeacrhLocators.NAVIGATION_BAR, time=2)
-    #     nav_bar_menu = [x.text for x in all_list if len(x.text) > 0]
-    #     return nav_bar_menu

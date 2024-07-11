@@ -1,15 +1,8 @@
 import pytest
 from selenium import webdriver
-from env_preferences import load_env as env
+from env_preferences import global_vars as global_variebles
 
-browserName = env.get_from_env('BROWSER_NAME')
-
-
-# https://habr.com/ru/articles/472156/
-# https://pypi.org/project/chromedriver-py/
-# https://pypi.org/project/get-gecko-driver/
-
-# TODO pip install webdriver-manager
+browserName = global_variebles.BROWSER_NAME
 
 
 def get_driver():
@@ -30,7 +23,6 @@ def browser():
     driver.maximize_window()
     driver.implicitly_wait(5)
 
-    # Steps before tests
     yield driver
-    # Steps after tests
+
     driver.quit()
