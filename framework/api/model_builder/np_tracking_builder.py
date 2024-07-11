@@ -15,7 +15,7 @@ class TrackingBuilder:
     def build_tracking_request(doc_number: str) -> Tracking:
         doc = Document(
             DocumentNumber=doc_number,
-            Phone=global_variables.PHONE_NUMBER
+            Phone=str(global_variables.PHONE_NUMBER)
         )
 
         documents: list[Document] = [doc]

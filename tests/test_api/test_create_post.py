@@ -2,6 +2,7 @@ import pytest
 from framework.api.model_builder.posts_builder import PostsModelBuilder as build
 from framework.api.controller.posts_controller import PostsController as action
 from framework.api.models.create_post_model import Post
+from logger_module import logger_setup as log
 
 
 @pytest.fixture(scope='function')
@@ -14,7 +15,7 @@ def setup_function():
 @pytest.mark.api
 def test_create_post(setup_module, setup_function):
     print('\nTest\n')
-    log.print('logging test in API test')
+    log.print_line('logging test in API test')
     assert 1 > 0
 
     # Build model

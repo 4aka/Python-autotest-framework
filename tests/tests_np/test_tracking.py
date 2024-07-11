@@ -14,7 +14,7 @@ def setup_function():
 @pytest.mark.api
 def test_create_post(setup_module, setup_function):
 
-    tracking_number = ''
+    tracking_number = '20450959314437'
 
     # Build model
     tracking = builder.build_tracking_request(tracking_number)
