@@ -14,5 +14,5 @@ assets
 /tests/test_api/report.xml
 /report.xml
 /report/report.xml
-/tests/tests_np/report/report.xml
+/tests/test_np/report/report.xml
 /tests/test_ui/report/report.xml
