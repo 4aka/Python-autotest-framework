@@ -5,6 +5,6 @@ v1 add before/after methods class fixtures Done
 v1 Add code for UI testing Done
 v1 Add suites Done
 
-Add possibility to work with credentials and tokens
-Add all possible parsing for API methods
-
+TODO Add possibility to work with credentials and tokens
+TODO Add all possible parsing for API methods
+TODO pip install webdriver-manager
