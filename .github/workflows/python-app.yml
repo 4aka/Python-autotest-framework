@@ -1,3 +1,5 @@
+# https://github.com/orgs/community/discussions/42133
+
 name: Automation project
 
 on:
@@ -13,6 +15,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+
+    # environment: ${{ github.event.inputs.TARGET_ENV || 'test' }}
 
     steps:
     - uses: actions/checkout@v4
@@ -33,12 +37,15 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       env:
-        BROWSER_NAME: ${{ secrets.BROWSER_NAME }}
-        BASE_URL: ${{ secrets.BASE_URL }}
-        UI_BASE_URL: ${{ secrets.UI_BASE_URL }}
-        LOG_LEVEL: ${{ secrets.LOG_LEVEL }}
-        API_KEY: ${{ secrets.API_KEY }}
-        PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
-        NP_BASE_URL: ${{ secrets.NP_BASE_URL }}
+        BROWSER_NAME: ${{ vars.BROWSER_NAME }}
+        BASE_URL: ${{ vars.BASE_URL }}
+        UI_BASE_URL: ${{ vars.UI_BASE_URL }}
+        LOG_LEVEL: ${{ vars.LOG_LEVEL }}
+        API_KEY: ${{ vars.API_KEY }}
+        PHONE_NUMBER: ${{ vars.PHONE_NUMBER }}
+        NP_BASE_URL: ${{ vars.NP_BASE_URL }}
       run: |
+        echo ${{ vars.ENVIRONMENT_NAME }}
+        echo ${{ vars.BROWSER_NAME }}
+        echo ${{ vars.BROWSER_NAME }}
         pytest
