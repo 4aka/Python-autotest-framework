@@ -41,5 +41,6 @@ jobs:
         PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
         NP_BASE_URL: ${{ secrets.NP_BASE_URL }}
       run: |
-        echo "Secret: $BROWSER_NAME"
+        python -c "import os; print('BROWSER_NAME:', os.getenv('BROWSER_NAME'));
+        pytest --my-secret=$BROWSER_NAME --my-variable=$BROWSER_NAME
         pytest
