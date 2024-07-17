@@ -29,7 +29,7 @@ def test_parcel_tracking(setup_module, setup_function):
 
     # Assertions
     assert tracking_response.success
-    assert len(tracking_response.errors) is 0
+    assert len(tracking_response.errors) == 0
 
 
 @pytest.mark.api
