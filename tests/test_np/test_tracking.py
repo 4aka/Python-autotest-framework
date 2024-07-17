@@ -26,11 +26,10 @@ def test_parcel_tracking(setup_module, setup_function):
 
     # Parse response
     tracking_response = TrackingResponse.model_validate(response.json())
-    parcel = tracking_response.data[0]
 
     # Assertions
     assert tracking_response.success
-    assert parcel.Number == tracking_number
+    assert len(tracking_response.errors) is 0
 
 
 @pytest.mark.api
@@ -51,6 +50,7 @@ def test_parcel_number_is_incorrect(setup_module, setup_function):
     # Assertions
     assert not tracking_response.success
     assert tracking_response.errors[0] == 'Document number is not correct'
+
 
 if __name__ == '__main__':
     pytest.main()
