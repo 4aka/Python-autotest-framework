@@ -42,4 +42,5 @@ jobs:
         NP_BASE_URL: ${{ secrets.NP_BASE_URL }}
         echo: BROWSER_NAME
       run: |
+        echo "name is $(BROWSER_NAME)"
         pytest
