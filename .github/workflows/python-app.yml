@@ -41,5 +41,5 @@ jobs:
         PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
         NP_BASE_URL: ${{ secrets.NP_BASE_URL }}
       run: |
-        echo "name is $(BROWSER_NAME)"
+        echo "${{ secrets.BROWSER_NAME }}"
         pytest
